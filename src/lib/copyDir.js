@@ -1,4 +1,3 @@
-
 var fs = require('fs');
 var path = require('path');
 
@@ -66,11 +65,11 @@ function removeDir (dir) {
     });
 }
 
-exports.traverse = function (dir, targetDir, isEmpty) {
+exports.copyDir = function (dir, targetDir, isEmpty) {
     if (isEmpty) {
         removeDir(targetDir);
     }
     traverseDir(dir, targetDir);
 };
 
-// exports.traverse(path.resolve(__dirname, '../'), path.resolve(__dirname, '../../soud') );
+// exports.copyDir(path.resolve(__dirname, '../'), path.resolve(__dirname, '../../soud') );
